@@ -1,0 +1,84 @@
+{
+  "scripts": {
+    "<---------- RUN PRODUCTION ---------->": "",
+    "start": "cross-env NODE_ENV=production node web/dist/index.js",
+    
+    "<---------- RUN BUILD ---------->": "",
+    "prebuild": "cross-env NODE_ENV=production node scripts/generateEnvFiles",
+    "build": "shopify app build",
+    "gen:dockerfile": "node scripts/createDockerfile",
+    "gen:deploy-heroku-workflow": "node scripts/createDeployHerokuWorkflow",
+
+    "<---------- RUN DEV ---------->": "",
+    "predev": "cross-env NODE_ENV=development node scripts/generateEnvFiles",
+    "dev": "shopify app dev",
+
+    "<---------- SHOPIFY CLI ---------->": "",
+    "shopify": "shopify",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy",
+    "environments": "shopify app env pull",
+
+    "<---------- HUSKY SETUP & COMMIT PROMPT ---------->": "",
+    "prepare": "husky install",
+    "husky:commitlint": "npx husky add .husky/commit-msg \"yarn commitlint --edit\"",
+    "husky:lint-staged": "npx husky add .husky/pre-commit \"yarn lint-staged\"",
+    "commit": "git-cz",
+    
+    "<---------- LINT-STAGED ---------->": "",
+    "soft-eslint:frontend": "eslint ./web/frontend/src/** -c .eslintrc.js --fix --ext ts,tsx,js,jsx --no-cache --no-error-on-unmatched-pattern",
+    "soft-eslint:backend": "eslint ./web/src/** -c .eslintrc.js --fix --ext ts,tsx,js,jsx --no-cache --no-error-on-unmatched-pattern",
+    "eslint:frontend": "eslint ./web/frontend/src/** -c .eslintrc.js --fix --ext ts,tsx,js,jsx --no-cache",
+    "eslint:backend": "eslint ./web/src/** -c .eslintrc.js --fix --ext ts,tsx,js,jsx --no-cache",
+    "eslint:liquid": "eslint '**/*.liquid'",
+    "tsc:backend": "tsc --project web/tsconfig.json --noEmit",
+    "tsc:frontend": "tsc --project web/frontend/tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@shopify/app": "3.43.0",
+    "@shopify/cli": "3.43.0",
+    "cookie-parser": "^1.4.6",
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@commitlint/cz-commitlint": "^17.4.4",
+    "@shopify/prettier-plugin-liquid": "^1.0.6",
+    "@types/cookie-parser": "^1.4.3",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.51.0",
+    "commitizen": "^4.3.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "engines": {
+    "yarn": "^1.x",
+    "node": "^16.x",
+    "npm": "^9.x"
+  },
+  "name": "tuong-shopify-admin-embeded-app-with-express-boilerplate",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "lemanh-tuong",
+    "email": "tuonglm.5920@gmail.com",
+    "url": "https://github.com/lemanh-tuong"
+  }
+}
