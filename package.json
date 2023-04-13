@@ -38,7 +38,6 @@
   "dependencies": {
     "@shopify/app": "3.43.0",
     "@shopify/cli": "3.43.0",
-    "cookie-parser": "^1.4.6",
     "cross-env": "^7.0.3"
   },
   "devDependencies": {
@@ -46,7 +45,6 @@
     "@commitlint/config-conventional": "^17.4.4",
     "@commitlint/cz-commitlint": "^17.4.4",
     "@shopify/prettier-plugin-liquid": "^1.0.6",
-    "@types/cookie-parser": "^1.4.3",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.51.0",
     "commitizen": "^4.3.0",
