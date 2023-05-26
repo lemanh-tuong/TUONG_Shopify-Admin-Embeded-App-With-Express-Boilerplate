@@ -64,15 +64,20 @@ export const getAppExtensionStatusActive = async ({
       },
     });
 
-    const json_parse = JSON.parse(settings_data.data.asset.value);
-    const blocks = json_parse.current.blocks as Blocks;
-    if (typeof blocks === 'object' && blocks !== null) {
-      const disabled = Object.values(blocks).find(block => {
-        return block.type.includes(appEmbedExtensionUuid_);
-      })?.disabled;
-      return typeof disabled === 'boolean' ? !disabled : false;
+    
+    try {
+      const json_parse = JSON.parse(settings_data.data.asset.value);
+      const blocks = json_parse.current.blocks as Blocks;
+      if (typeof blocks === 'object' && blocks !== null) {
+        const disabled = Object.values(blocks).find(block => {
+          return block.type.includes(appEmbedExtensionUuid_);
+        })?.disabled;
+        return typeof disabled === 'boolean' ? !disabled : false;
+      }
+      return false;
+    } catch {
+      return false;
     }
-    return false;
   } catch (error) {
     const error_ = error as Error;
     reportService.createReportError({
