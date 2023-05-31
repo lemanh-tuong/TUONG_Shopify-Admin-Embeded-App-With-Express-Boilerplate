@@ -22,6 +22,16 @@
     "target": "ESNext",
     "module": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    
+    "plugins": [
+      { "name": "typescript-plugin-css-modules" },
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": ["debug"]
+        }
+      }
+    ],
   }
 }

@@ -17,6 +17,7 @@ module.exports = {
         'style', // Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
         'test', // Adding missing tests or correcting existing tests
         'todo', // Add tags "TODO"
+        'update', // Small update
       ],
     ],
   },
@@ -46,6 +47,7 @@ module.exports = {
           },
           test: { description: 'Adding missing tests or correcting existing tests', title: 'Tests' },
           todo: { description: 'Add tags "TODO:"', title: 'TODO' },
+          update: { description: 'Small update', title: 'Update' },
         },
       },
       subject: {

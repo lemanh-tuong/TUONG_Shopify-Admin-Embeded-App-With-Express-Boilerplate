@@ -59,7 +59,7 @@
   "workbench.startupEditor": "newUntitledFile",
 
   // Eslint
-  "eslint.workingDirectories": [],
+  "eslint.workingDirectories": ["./web"],
 
   // Extensions - TODO Highlight
   "todohighlight.isEnable": true,
