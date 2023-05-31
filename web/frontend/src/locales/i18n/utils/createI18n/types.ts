@@ -1,4 +1,4 @@
-type OptionKeys<T extends string> = T extends `${any}{{${infer U}}}${infer C}` ? Trim<U> | OptionKeys<C> : never;
+type OptionKeys<T extends string> = T extends `${any}%%${infer U}%%${infer C}` ? Trim<U> | OptionKeys<C> : never;
 type Path<T> = PathKeyOfObject<T, keyof T>;
 
 export type TextTransform = 'none' | 'uppercase' | 'lowercase' | 'capitalize';

@@ -64,7 +64,6 @@ export const getAppExtensionStatusActive = async ({
       },
     });
 
-    
     try {
       const json_parse = JSON.parse(settings_data.data.asset.value);
       const blocks = json_parse.current.blocks as Blocks;
