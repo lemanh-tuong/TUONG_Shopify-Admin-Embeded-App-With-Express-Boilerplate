@@ -54,3 +54,7 @@
 7. Đợi cài đặt dependencies thành công ![Installing dependencies](./images/installing_dependencies.png)
 8. Tốt nhất nên chọn option 1 ![App url](./images/app_url.png)
 9. Theo các gợi ý ở terminal, ấn "P" để mở trình duyệt ![Success](./images/success.png)
+
+# Cách lấy giá trị biến "_____ADDITIONAL_VARIABLE______APP_EMBED_EXTENSION_UUID"
+1. Chạy "yarn deploy" ![yarn deploy](./images/yarn-deploy.png) 
+2. Sau khi bước 1 thành công, tại file ".env" ở root sẽ xuất hiện 1 biến tên "SHOPIFY_THEME_APP_EXTENSION_ID" => Biến này là giá trị của "_____ADDITIONAL_VARIABLE______APP_EMBED_EXTENSION_UUID"
