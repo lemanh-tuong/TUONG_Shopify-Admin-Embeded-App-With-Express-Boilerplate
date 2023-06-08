@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { writeFileSync } = require('fs');
-const { deployHerokuWorkflowDirectory } = require('../consts');
+const { deployHerokuWorkflowDirectory } = require('../@consts');
 
 const deployHerokuYaml = [
   '# Your workflow name. ',

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { fixedVariables, prefixOfAdditionalVariables } = require('../../consts');
-const { getExpectAdditionalEnvVariables } = require('../../utils/getExpectAdditionalEnvVariables');
+const { fixedVariables, prefixOfAdditionalVariables } = require('../../@consts');
+const { getExpectAdditionalEnvVariables } = require('../../@utils/getExpectAdditionalEnvVariables');
 require('dotenv').config();
 
 const getAdditionalEnvVariables = () => {

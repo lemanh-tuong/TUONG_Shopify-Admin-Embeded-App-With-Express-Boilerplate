@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { readFileSync } = require('fs');
-const { prefixOfAdditionalVariables, envExampleDirectory } = require('../consts/index.js');
+const { prefixOfAdditionalVariables, envExampleDirectory } = require('../@consts/index.js');
 require('dotenv').config();
 
 /**

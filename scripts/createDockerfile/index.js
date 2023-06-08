@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { writeFileSync } = require('fs');
-const { fixedVariables } = require('../consts');
-const { getExpectAdditionalEnvVariables } = require('../utils/getExpectAdditionalEnvVariables');
+const { fixedVariables } = require('../@consts');
+const { getExpectAdditionalEnvVariables } = require('../@utils/getExpectAdditionalEnvVariables');
 
 const expectAdditionalEnvVariables = getExpectAdditionalEnvVariables();
 
